@@ -1,11 +1,11 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     div.buttons {
       width: 100%;
       flex-direction: column;
     }
   }
   
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     .buttonCrip {
       width: 100%;
       height: 60px;
@@ -15,7 +15,7 @@
   }
   
   
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     .buttonDescrip {
       width: 100%;
       height: 60px;

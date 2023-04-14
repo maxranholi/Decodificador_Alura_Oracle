@@ -13,11 +13,7 @@
 }
 @media screen and (max-width: 466px) {
     .subTitle {
-      text-align: center;
-      color: #343a40;
-      font-size: 1.6rem;
       line-height: 1.8rem;
-      width: 90%;
+      width: 100%;
     }
   }
-  
