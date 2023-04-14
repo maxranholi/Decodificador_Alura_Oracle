@@ -1,0 +1,33 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+  }
+  
+  .image {
+    height: 36%;
+    width: 80%;
+  }
+  
+  .subTitle {
+    text-align: center;
+    color: #343a40;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+  
+  .message {
+    text-align: center;
+    color: #495057;
+    display: flex;
+    width: 80%;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }

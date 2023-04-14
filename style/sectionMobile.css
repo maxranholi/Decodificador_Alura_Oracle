@@ -1,0 +1,23 @@
+@media screen and (max-width: 400px) {
+    div.section {
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 528px) {
+    .message {
+        flex-wrap: wrap;
+        line-height: 1.4rem;
+        width: 90%;
+      }
+}
+@media screen and (max-width: 466px) {
+    .subTitle {
+      text-align: center;
+      color: #343a40;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      width: 90%;
+    }
+  }
+  
