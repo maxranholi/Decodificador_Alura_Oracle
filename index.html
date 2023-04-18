@@ -23,12 +23,18 @@
   </head>
   <body>
     <div class="header">
-      <img class="imageLogo" src="/assets/Vector.png" alt="Logo da Alura com a letra A">
+      <img
+        class="imageLogo"
+        src="/assets/Vector.png"
+        alt="Logo da Alura com a letra A"
+      />
     </div>
     <div class="main">
-      <input class="input" type="text" value="Digite seu texto">
+      <textarea class="input" name="input" name="Digite o seu texto">Digite o seu texto</textarea>
       <div class="buttons">
-        <button class="buttonCrip">Criptografar</button>
+        <button onClick="showEncriptedMessage()" class="buttonCrip">
+          Criptografar
+        </button>
         <button class="buttonDescrip">Descriptografar</button>
       </div>
     </div>
@@ -39,18 +45,10 @@
         alt="Garota sentanda com uma lupa na mão"
       />
       <h3 class="subTitle">Nenhuma mensagem encontrada.</h3>
-      <p class="message">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <p class="message">
+        Digite um texto que você deseja criptografar ou descriptografar.
+      </p>
     </div>
+    <script src="/main.js"></script>
   </body>
 </html>
-
-<!-- <input />
-
-<button>clique aqui</button>
-
-function oi() {
-  alert("Hello World");
-}
-
-let button = document.querySelector("button");
-button.onclick = oi; -->
