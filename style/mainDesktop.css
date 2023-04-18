@@ -1,5 +1,5 @@
 .main {
-  height: 86%;
+  height: fit-content;
   width: 70%;
   gap: 1rem;
   display: flex;

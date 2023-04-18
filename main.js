@@ -14,7 +14,7 @@ function showEncriptedMessage() {
       inputLowerCase[i] === "â" ||
       inputLowerCase[i] === "ã"
     ) {
-      phrase += "ai";
+      phrase += inputLowerCase.replace(a/á/à/ã/â/gi, 'ai');
     }
     if (
       input.value[i] === "e" ||
