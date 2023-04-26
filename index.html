@@ -30,7 +30,12 @@
       />
     </div>
     <div class="main">
-      <textarea class="input" name="input" placeholder="Digite seu texto"></textarea>
+      <textarea
+        autofocus
+        class="input"
+        name="input"
+        placeholder="Digite seu texto"
+      ></textarea>
       <div class="buttons">
         <button onClick="showEncriptedMessage()" class="buttonCrip">
           Criptografar
@@ -50,6 +55,7 @@
       <p class="message">
         Digite um texto que você deseja criptografar ou descriptografar.
       </p>
+      <p class="messageResult"></p>
     </div>
     <script src="/main.js"></script>
   </body>
