@@ -50,13 +50,22 @@
 .input {
   display: flex;
   width: 70%;
-  height: 80%;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
-  color: #0a3871;
   text-align: left;
-  line-height: 7.5em;
+  line-height: 1.5em;
   background-color: transparent;
   border: none;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  height: 12em;
+}
+
+.input::placeholder {
+  color: #0a3871;
+}
+
+.input:focus {
+  outline: none;
 }

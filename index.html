@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Decodificador</title>
   </head>
   <body>
     <div class="header">
@@ -30,12 +30,14 @@
       />
     </div>
     <div class="main">
-      <textarea class="input" name="input" placeholder="digite" ></textarea>
+      <textarea class="input" name="input" placeholder="Digite seu texto"></textarea>
       <div class="buttons">
         <button onClick="showEncriptedMessage()" class="buttonCrip">
           Criptografar
         </button>
-        <button class="buttonDescrip">Descriptografar</button>
+        <button onClick="showDecriptedMessage()" class="buttonDescrip">
+          Descriptografar
+        </button>
       </div>
     </div>
     <div class="section">

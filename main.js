@@ -4,66 +4,48 @@ let message = document.querySelector(".message");
 let messageOut = document.querySelector(".subTitle");
 
 function showEncriptedMessage() {
-  let phrase = "";
-  let inputLowerCase = input.value.toLowerCase();
-  for (let i = 0; i < inputLowerCase.length; i++) {
-    if (
-      inputLowerCase[i] === "a" ||
-      inputLowerCase[i] === "á" ||
-      inputLowerCase[i] === "à" ||
-      inputLowerCase[i] === "â" ||
-      inputLowerCase[i] === "ã"
-    ) {
-      phrase += inputLowerCase.replace(a/á/à/ã/â/gi, 'ai');
-    }
-    if (
-      input.value[i] === "e" ||
-      input.value[i] === "é" ||
-      input.value[i] === "ê"
-    ) {
-      phrase += "enter";
-    }
-    if (
-      input.value[i] === "i" ||
-      input.value[i] === "í" ||
-      input.value[i] === "ì" ||
-      input.value[i] === "î"
-    ) {
-      phrase += "imes";
-    }
-    if (
-      input.value[i] === "o" ||
-      input.value[i] === "ò" ||
-      input.value[i] === "ó" ||
-      input.value[i] === "õ" ||
-      input.value[i] === "ô"
-    ) {
-      phrase += "ober";
-    }
-    if (
-      input.value[i] === "u" ||
-      input.value[i] === "ú" ||
-      input.value[i] === "ù" ||
-      input.value[i] === "û"
-    ) {
-      phrase += "ufat";
-    } else {
-      phrase += inputLowerCase[i];
-    }
-  }
-  return phrase;
+  let str = input.value;
+  const mapObj = {
+    a: "ai",
+    e: "enter",
+    i: "imes",
+    o: "ober",
+    u: "ufat",
+  };
+  let newString = str.replace(/a|e|i|o|u/gi, function (matched) {
+    return mapObj[matched];
+  });
+  return newString;
 }
 
-function updateMessage() {
+function showDecriptedMessage() {
+  let str = input.value;
+  const mapObj = {
+    ai: "a",
+    enter: "e",
+    imes: "i",
+    ober: "o",
+    ufat: "u",
+  };
+  let newString = str.replace(/ai|enter|imes|ober|ufat/gi, function (matched) {
+    return mapObj[matched];
+  });
+  return newString;
+}
+
+function encripMessage() {
   message.textContent = showEncriptedMessage();
 }
+document.querySelector(".buttonCrip").addEventListener("click", encripMessage);
 
-document.querySelector(".buttonCrip").addEventListener("click", updateMessage);
+function decripMessage() {
+  message.textContent = showDecriptedMessage()
+}
 
-document.querySelector(".buttonCrip").addEventListener("click", updateMessage);
+document.querySelector(".buttonDescrip").addEventListener("click", decripMessage)
+
+
 document.querySelector(".buttonCrip").addEventListener("click", function () {
-  showSection.style.display= "none";
+  showSection.style.display = "none";
+  messageOut.style.display = "none";
 });
-document.querySelector(".buttonCrip").addEventListener("click", function () {
-    messageOut.style.display= "none";
-  });
