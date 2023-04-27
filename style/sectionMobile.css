@@ -1,9 +1,3 @@
-@media screen and (max-width: 400px) {
-    div.section {
-        height: fit-content;
-    }
-}
-
 @media screen and (max-width: 528px) {
     .message {
         flex-wrap: wrap;

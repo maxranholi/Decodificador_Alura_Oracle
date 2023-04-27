@@ -12,56 +12,58 @@ function checkEmptyValue() {
 
 function showEncriptedMessage() {
   checkEmptyValue();
-  if (/^[A-Z0-9]+$/i.test(input.value)) {
+  if (/^[a-z0-9]+$/g.test(input.value)) {
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(input.value)) {
-      return alert(
-        "Por favor, apenas letras minúsculas e sem caracteres especiais."
-      );
+      let str = input.value;
+      const mapObj = {
+        a: "ai",
+        e: "enter",
+        i: "imes",
+        o: "ober",
+        u: "ufat",
+      };
+      let newString = str.replace(/a|e|i|o|u/gi, function (matched) {
+        return mapObj[matched];
+      });
+      return newString;
     } else {
       return false;
     }
   } else {
-    let str = input.value;
-    const mapObj = {
-      a: "ai",
-      e: "enter",
-      i: "imes",
-      o: "ober",
-      u: "ufat",
-    };
-    let newString = str.replace(/a|e|i|o|u/gi, function (matched) {
-      return mapObj[matched];
-    });
-    return newString;
+    return alert(
+      "Por favor, somente letras minúsculas e sem caracteres especiais."
+    );
   }
 }
 
 function showDecriptedMessage() {
-  checkEmptyValue();
-  if (/^[A-Z0-9]+$/i.test(input.value)) {
+  if (!validateInput()) {
+    return;
+  }
+  if (/^[a-z0-9]+$/g.test(input.value)) {
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(input.value)) {
-      return alert(
-        "Por favor, apenas letras minúsculas e sem caracteres especiais."
+      let str = input.value;
+      const mapObj = {
+        ai: "a",
+        enter: "e",
+        imes: "i",
+        ober: "o",
+        ufat: "u",
+      };
+      let newString = str.replace(
+        /ai|enter|imes|ober|ufat/gi,
+        function (matched) {
+          return mapObj[matched];
+        }
       );
+      return newString;
     } else {
       return false;
     }
   } else {
-    let str = input.value;
-    const mapObj = {
-      ai: "a",
-      enter: "e",
-      imes: "i",
-      ober: "o",
-      ufat: "u",
-    };
-    let newString = str.replace(
-      /ai|enter|imes|ober|ufat/gi,
-      function (matched) {
-        return mapObj[matched];
-      }
+    return alert(
+      "Por favor, somente letras minúsculas e sem caracteres especiais."
     );
-    return newString;
   }
 }
 

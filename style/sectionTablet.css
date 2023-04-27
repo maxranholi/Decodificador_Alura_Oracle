@@ -1,9 +1,10 @@
 @media screen and (max-width: 1174px) {
   div.section {
-    height: 24%;
     width: 100%;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    margin-top: 0;
   }
 }
 
