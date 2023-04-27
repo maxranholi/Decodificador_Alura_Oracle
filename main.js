@@ -37,9 +37,7 @@ function showEncriptedMessage() {
 }
 
 function showDecriptedMessage() {
-  if (!validateInput()) {
-    return;
-  }
+  checkEmptyValue();
   if (/^[a-z0-9]+$/g.test(input.value)) {
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(input.value)) {
       let str = input.value;
