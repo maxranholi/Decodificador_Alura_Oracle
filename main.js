@@ -3,15 +3,20 @@ let showSection = document.querySelector(".image");
 let message = document.querySelector(".message");
 let messageOut = document.querySelector(".subTitle");
 let messageResults = document.querySelector(".messageResult");
+let buttonCopy = document.querySelector(".buttonCopy");
 
 function checkEmptyValue() {
   if (input.value === "") {
     alert("Digite algum texto");
+    return false;
   }
+  return true;
 }
 
 function showEncriptedMessage() {
-  checkEmptyValue();
+  if (!checkEmptyValue()) {
+    return false;
+  }
   if (/^[a-z0-9]+$/g.test(input.value)) {
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(input.value)) {
       let str = input.value;
@@ -37,7 +42,9 @@ function showEncriptedMessage() {
 }
 
 function showDecriptedMessage() {
-  checkEmptyValue();
+  if (!checkEmptyValue()) {
+    return false;
+  }
   if (/^[a-z0-9]+$/g.test(input.value)) {
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(input.value)) {
       let str = input.value;
@@ -66,25 +73,33 @@ function showDecriptedMessage() {
 }
 
 function encripMessage() {
-  messageResults.textContent = showEncriptedMessage();
+  const encryptedMessage = showEncriptedMessage();
+  if (encryptedMessage) {
+    messageResults.textContent = encryptedMessage;
+    showSection.style.display = "none";
+    messageOut.style.display = "none";
+    message.style.display = "none";
+    messageResults.style.display = "flex";
+    buttonCopy.style.display = "flex";
+  }
 }
 
 document.querySelector(".buttonCrip").addEventListener("click", function () {
   encripMessage();
-  showSection.style.display = "none";
-  messageOut.style.display = "none";
-  message.style.display = "none";
-  messageResults.style.display = "flex";
 });
 
 function decripMessage() {
-  messageResults.textContent = showDecriptedMessage();
+  const descrypMessage = showDecriptedMessage();
+  if (descrypMessage) {
+    messageResults.textContent = descrypMessage;
+    showSection.style.display = "none";
+    messageOut.style.display = "none";
+    message.style.display = "none";
+    messageResults.style.display = "flex";
+    buttonCopy.style.display = "flex";
+  }
 }
 
 document.querySelector(".buttonDescrip").addEventListener("click", function () {
   decripMessage();
-  showSection.style.display = "none";
-  messageOut.style.display = "none";
-  message.style.display = "none";
-  messageResults.style.display = "flex";
 });

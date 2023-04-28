@@ -1,3 +1,9 @@
+@media screen and (max-width: 1452px) {
+  div.main {
+    margin-top: 4rem;
+  }
+}
+
 @media screen and (max-width: 1174px) {
   div.main {
     width: 100%;
