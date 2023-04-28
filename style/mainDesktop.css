@@ -60,6 +60,7 @@
   flex-wrap: wrap;
   margin-bottom: 2rem;
   height: 12em;
+  resize: none;
 }
 
 .input::placeholder {

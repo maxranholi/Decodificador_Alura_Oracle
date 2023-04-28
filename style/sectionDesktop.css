@@ -37,9 +37,18 @@
 .messageResult {
   display: flex;
   text-align: center;
+  align-items: center;
   color: #495057;
   font-size: 1.2rem;
+  width: 90%;
+  height: 80%;
   display: none;
+  border: none;
+  resize: none;
+}
+
+.messageResult:focus {
+  outline: none;
 }
 
 .buttonCopy {
