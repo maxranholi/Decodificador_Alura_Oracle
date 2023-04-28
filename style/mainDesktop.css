@@ -1,7 +1,6 @@
 .main {
   height: fit-content;
   width: 70%;
-  gap: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,4 +68,14 @@
 
 .input:focus {
   outline: none;
+}
+
+.messageNoEspecialChar {
+  display: flex;
+  text-align: center;
+  color: #495057;
+  width: 68%;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
