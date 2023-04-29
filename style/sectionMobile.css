@@ -11,3 +11,9 @@
       width: 100%;
     }
   }
+
+  @media screen and (max-width: 1174px) {
+    .messageResult {
+      height: 100%;
+    }
+  }

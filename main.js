@@ -7,7 +7,7 @@ let buttonCopy = document.querySelector(".buttonCopy");
 
 function checkEmptyValue() {
   if (input.value === "") {
-    alert("Digite algum texto");
+    alert("Por favor, digite algum texto.");
     return false;
   }
   return true;
@@ -72,7 +72,7 @@ function showDecriptedMessage() {
   }
 }
 
-function encripMessage() {
+document.querySelector(".buttonCrip")(function () {
   const encryptedMessage = showEncriptedMessage();
   if (encryptedMessage) {
     messageResults.textContent = encryptedMessage;
@@ -82,13 +82,9 @@ function encripMessage() {
     messageResults.style.display = "flex";
     buttonCopy.style.display = "flex";
   }
-}
-
-document.querySelector(".buttonCrip").addEventListener("click", function () {
-  encripMessage();
 });
 
-function decripMessage() {
+document.querySelector(".buttonDescrip")(function () {
   const descrypMessage = showDecriptedMessage();
   if (descrypMessage) {
     messageResults.textContent = descrypMessage;
@@ -98,8 +94,4 @@ function decripMessage() {
     messageResults.style.display = "flex";
     buttonCopy.style.display = "flex";
   }
-}
-
-document.querySelector(".buttonDescrip").addEventListener("click", function () {
-  decripMessage();
 });
