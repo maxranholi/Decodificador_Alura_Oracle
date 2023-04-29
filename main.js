@@ -7,7 +7,7 @@ let buttonCopy = document.querySelector(".buttonCopy");
 
 function checkEmptyValue() {
   if (input.value === "") {
-    alert("Por favor, digite algum texto.");
+    alert("Digite algum texto");
     return false;
   }
   return true;
@@ -72,7 +72,7 @@ function showDecriptedMessage() {
   }
 }
 
-document.querySelector(".buttonCrip")(function () {
+function encripMessage() {
   const encryptedMessage = showEncriptedMessage();
   if (encryptedMessage) {
     messageResults.textContent = encryptedMessage;
@@ -82,9 +82,9 @@ document.querySelector(".buttonCrip")(function () {
     messageResults.style.display = "flex";
     buttonCopy.style.display = "flex";
   }
-});
+}
 
-document.querySelector(".buttonDescrip")(function () {
+function decripMessage() {
   const descrypMessage = showDecriptedMessage();
   if (descrypMessage) {
     messageResults.textContent = descrypMessage;
@@ -94,4 +94,4 @@ document.querySelector(".buttonDescrip")(function () {
     messageResults.style.display = "flex";
     buttonCopy.style.display = "flex";
   }
-});
+}
